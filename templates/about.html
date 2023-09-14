@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="about.css">
+    {% comment %} <link rel="stylesheet" href="about.css"> {% endcomment %}
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+
 </head>
 <body>
     <div class="about-sec">
       <nav class="navbar navbar-expand-lg bg-success bg-gradient fs-5 bgp sticky-top">
         <div class="container-fluid">
-          <div class="logo "><img src="images/logo1.png" alt=""></div>
+          <div class="logo ">
+            <img src = "{% static 'images/logo1.png' %}" alt = "">
+            {% comment %} <img src="images/logo1.png" alt=""> {% endcomment %}
+          </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -57,7 +63,8 @@
                 <h5>Our mission is to streamline healthcare, transform lives, and empower individuals through convenient and accessible lab  testing services, making health management easier than ever before.</h5>
             </div>
             <div class="right-head">
-                <img src="Images/about image.jpg" alt="">
+                <img src = "{% static 'images/about image.jpg' %}" alt = "">
+                {% comment %} <img src="Images/about image.jpg" alt=""> {% endcomment %}
             </div>
            </div>
         </header>
@@ -139,16 +146,24 @@
         <div class="copy-right">
           <h1><u>Some Of Our Famous Partner</u></h1>
          <div class="first-row">
-          <img src="Images/partner1.gif" alt="">
+          <img src = "{% static 'images/partner1.gif' %}" alt = "">
+          <img src = "{% static 'images/partner3.jpg' %}" alt = "">
+          <img src = "{% static 'images/partner2.jpg' %}" alt = "">
+          <img src = "{% static 'images/partner7.png' %}" alt = "">
+          {% comment %} <img src="Images/partner1.gif" alt="">
           <img src="Images/partner3.jpg" alt="">
           <img src="Images/partner2.jpg" alt="">
-          <img src="Images/partner7.png" alt="">
+          <img src="Images/partner7.png" alt=""> {% endcomment %}
          </div>
          <div class="first-row" style="margin-top: 80px;">
-          <img src="Images/partner4.jpeg" alt="">
+          <img src = "{% static 'images/partner4.jpeg' %}" alt = "">
+          <img src = "{% static 'images/partner5.png' %}" alt = "">
+          <img src = "{% static 'images/partner6.jpg' %}" alt = "">
+          <img src = "{% static 'images/partner8.jpeg' %}" alt = "">
+          {% comment %} <img src="Images/partner4.jpeg" alt="">
           <img src="Images/partner5.png" alt="">
           <img src="Images/partner6.jpg" alt="">
-          <img src="Images/partner8.jpeg" alt="">
+          <img src="Images/partner8.jpeg" alt=""> {% endcomment %}
          </div>
         </div>
 
