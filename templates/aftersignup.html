@@ -20,7 +20,7 @@
 <body>
   <nav class="navbar navbar-expand-lg  bg-gradient fs-2 bgp">
     <div class="container-fluid">
-      <a class="navbar-brand fs-2 " href="#">Labotics</a>
+      <a class="navbar-brand fs-2 " href="#">Labotics</a> 
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -180,13 +180,31 @@
 </footer>
   <!-- <script src="login.js" type="module"></script> -->
   <script src = "{% static 'js/bootstrap.bundle.min.js' %}" type = "module"></script>
-
   <script src = "{% static 'logic.js' %}" type = "module"></script>
-{% comment %} 
-<script src="js/bootstrap.bundle.min.js"></script>
-  <script src="logic.js"></script> {% endcomment %}
-  
   <script src="https://kit.fontawesome.com/02dcb82b73.js" crossorigin="anonymous"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js';
+   import { getAuth } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js';
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCDJPkMheOnWSJnMIozfsQcdA2Scsd5P8Q",
+      authDomain: "labquest-3aea4.firebaseapp.com",
+      projectId: "labquest-3aea4",
+      storageBucket: "labquest-3aea4.appspot.com",
+      messagingSenderId: "637763619838",
+      appId: "1:637763619838:web:5f1674f6cb716765f0ceaf"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+  </script> 
+  <script src="{% static 'aftersignup.js' %}" defer type="module"></script>
+  
 </body>
 
 </html>

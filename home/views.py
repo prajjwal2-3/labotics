@@ -15,4 +15,6 @@ def signup(request):
 def aftersignup(request):
     return render(request,'aftersignup.html')
 
+def login(request):
+    return render(request,'login.html')
 # Create your views here.

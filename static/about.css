@@ -67,20 +67,20 @@
 .faqs{
     width: 1500px;
     height: auto;
-    border: 1px solid  gray;
+    /* border: 1px solid  gray; */
     margin: 0 auto;
     margin-top: 80px;
-    box-shadow: 0px -25px 20px -20px rgba(0,0,0,0.45),
+    /* box-shadow: 0px -25px 20px -20px rgba(0,0,0,0.45),
 25px 0px 20px -20px rgba(0,0,0,0.45),
 0px 25px 20px -20px rgba(0,0,0,0.45),
--25px 0px 20px -20px rgba(0,0,0,0.45);
+-25px 0px 20px -20px rgba(0,0,0,0.45); */
 
 }
 .faqs-heading{
     
     width: 100%;
     height: auto;
-    border: 10px solid rgb(95, 95, 95);
+    /* border: 10px solid rgb(95, 95, 95); */
 }
 .faqs-heading h1{
     width: 100%;
