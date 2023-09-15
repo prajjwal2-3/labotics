@@ -12,4 +12,7 @@ def search(request):
 def signup(request):
     return render(request,'signup.html')
 
+def aftersignup(request):
+    return render(request,'aftersignup.html')
+
 # Create your views here.

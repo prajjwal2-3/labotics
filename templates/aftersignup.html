@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+  {% comment %} <link rel="stylesheet" href="css/bootstrap.min.css"> {% endcomment %}
+  {% comment %} <link rel="stylesheet" href="style.css"> {% endcomment %}
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Krub:wght@500&display=swap" rel="stylesheet">
@@ -27,7 +31,8 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item mx-1">
-            <a class="nav-link" href="about.html">About</a>
+            <a class="nav-link" aria-current="page" href="{% url 'about' %}">About</a>
+            {% comment %} <a class="nav-link" href="about.html">About</a> {% endcomment %}
           </li>
           <li class="nav-item dropdown mx-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -48,7 +53,7 @@
         </ul>
         <div class="login ">
           <!-- <button type="button" class="btn btn-primary btn-lg bg-gradient"><a href="">Login</a></button> -->
-          <button type="button" class="btn btn-danger btn-lg bg-gradient"><a href="index.html">Sign out</a></button>
+          <button type="button" class="btn btn-danger btn-lg bg-gradient"><a href={% url "home" %}>Sign out</a></button>
         </div>
       </div>
     </div>
@@ -69,7 +74,7 @@
     </button>
   </div>
   <div class="centrekr heroimage ">
-    <img src="images/resizedhero1.jpg" alt="">
+    <img src="{% static 'images/resizedhero1.jpg' %}" alt="">
   </div>
   <h2 class="my-4" style="text-align: center;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -85,14 +90,16 @@
     </div>
     <div class="empty"></div>
     <div class="chestimage right">
-      <img src="images/chestimager2.jpg" alt="">
+      {% comment %} <img src="{% static 'images/resizedhero1.jpg' %}" alt=""> {% endcomment %}
+
+      <img src="{% static 'images/chestimager2.jpg' %}" alt="">
     </div>
   </div>
   <div class="chestsection " style="margin: 100px;">
 
 
     <div class="chestimage2 left">
-      <img src="images/chestimager3.jpg" alt="">
+      <img src="{% static 'images/chestimager3.jpg' %}" alt="">
     </div>
     <div class="empty"></div>
     <div class="chesttext2 right">
@@ -109,7 +116,7 @@
     </div>
     <div class="empty"></div>
     <div class="chestimage3 right">
-      <img src="images/chestimager4.jpg" alt="">
+      <img src="{% static 'images/chestimager4.jpg' %}" alt="">
     </div>
   </div>
   <div class="centrekr">
@@ -172,8 +179,12 @@
     </div>
 </footer>
   <!-- <script src="login.js" type="module"></script> -->
+  <script src = "{% static 'js/bootstrap.bundle.min.js' %}" type = "module"></script>
+
+  <script src = "{% static 'logic.js' %}" type = "module"></script>
+{% comment %} 
 <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="logic.js"></script>
+  <script src="logic.js"></script> {% endcomment %}
   
   <script src="https://kit.fontawesome.com/02dcb82b73.js" crossorigin="anonymous"></script>
 </body>
