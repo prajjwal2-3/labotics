@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+{% load static %}
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    {% comment %} <link rel="stylesheet" href="login.css"> {% endcomment %}
     <title>signup Page</title>
     
 </head>
@@ -24,8 +28,8 @@
         <h4>Already a user?? <br>Click below to Login</h4>
         <button  class="button1" type="submit">Login</button>
     </div>
-    
-    <script src="signup.js"></script>
+    <script src="{% static 'signup.js' %}"></script>
+    {% comment %} <script src="signup.js"></script> {% endcomment %}
     <script type="module">
         // Import the functions you need from the SDKs you need
        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js';
@@ -46,7 +50,9 @@
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
-      </script> 
-    <script src="auth.mjs" defer type="module"></script>
+      </script>
+    <script src="{% static 'auth.mjs' %}" defer type="module"></script>
+
+    {% comment %} <script src="auth.mjs" defer type="module"></script> {% endcomment %}
 </body>
 </html>

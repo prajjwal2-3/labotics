@@ -9,4 +9,7 @@ def about(request):
 def search(request):
     return render(request,'search.html')
 
+def signup(request):
+    return render(request,'signup.html')
+
 # Create your views here.
