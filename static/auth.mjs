@@ -24,6 +24,6 @@
         const errorMessage = error.message;
         // ..
       });
-    window.location.href ='index.html';
+    window.location.href ='/aftersignup.html';
   })
     
