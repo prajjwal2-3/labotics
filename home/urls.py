@@ -4,6 +4,9 @@ from home import views
 
 urlpatterns = [
     path('',views.index,name="home"),
-    path('about/',views.about,name="home"),
-    path('search/',views.search,name="home"),
+    path('about/',views.about,name="about"),
+    path('search/',views.search,name="search"),
+    path('signup/',views.signup,name="signup"),
+    path('aftersignup.html/',views.aftersignup,name="aftersignup")
 ]
+
