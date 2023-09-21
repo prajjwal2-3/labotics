@@ -18,3 +18,5 @@ def aftersignup(request):
 def login(request):
     return render(request,'login.html')
 # Create your views here.
+def bmi(request):
+    return render(request,'bmi.html')
